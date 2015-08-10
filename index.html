@@ -43,10 +43,11 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=933914846668654";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="brand">Bieter Eye Center</div>
+    <div class="brand"><a href="/">Bieter Eye Center</a></div>
     <div class="address-bar">8617 W. Pt. Douglas Rd. S. Suite #110 Cottage Grove, MN 55016</div>
     <div class="address-bar">Phone: 651-769-1020 Fax: 651-769-1021</div>
-
+    <div class="quoteLeft"><p id="quoteLeft">"Loved my visit, EVERYONE is very friendly and extremely helpful and knowledgeable. Would definately recommend!"<br>-Cheryl M.</p></div>
+    <div class="quoteRight"><p id="quoteRight">"An absolute pleasurable experience. A great office with professional staff that treats you like a true friend."<br>-Dan D.</p></div>
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -90,9 +91,10 @@
                     </li>
                     <li>
                         <div class="dropdown">
-                        <a data-target="#" href="patientforms.html" data-toggle="dropdown" id="patientforms" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>Patient Forms</a>
+                        <a data-target="#" href="patientforms.html" data-toggle="dropdown" id="patientforms" aria-haspopup="true" aria-expanded="false">Patient Forms<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labeledby="patientforms">
                             <li><a href="General_Info.pdf">General Patient Information Form</a></li>
+                            <li class="divider"></li>
                             <li><a href="Patient_Financial_Policy_Form.pdf">Patient Financial Policy Form</a></li>
                         </ul>
                     </li>
@@ -103,9 +105,10 @@
         <!-- /.container -->
     </nav>
     <div class="container">
-        <div id="hours">
+        <div class="sidebar col-md-3 hidden-sm hidden-xs">
+        <div class="hours col-lg-12 hidden-sm hidden-xs">
             <ul>
-                <li>Office Hours:</li>
+                <h4>Office Hours:</h4>
                 <li>Monday: 9:00AM-5:00PM</li>
                 <li>Tuesday: 8:00AM-7:00PM</li>
                 <li>Wednesday: 8:00AM-5:00PM</li>
@@ -113,7 +116,7 @@
                 <li>Friday: 8:00AM-5:00PM</li>
             </ul>
         </div>
-        <div class="sidebarLinks">
+        <div class="sidebarLinks col-lg-12 hidden-sm hidden-xs">
             <a href="https://secure.yourlens.com/DID18195/" target="_blank"><img class="img-responsive img-full" src="images/order_contacts_online.jpg"></a>
 
             <a href="optos.html"><img class="img-responsive img-full" src="images/optos_logo.jpg"></a>
@@ -124,13 +127,15 @@
 
             <a href="http://www.infantsee.org/" target="_blank"><img class="img-responsive img-full" src="images/infant_see_logo.jpg"></a>
 
-            <a href="http://www.smilereminder.com/vs/bieter_eye_center" target="_blank"><img class="img-responsive img-full" src="images/schedule_appointment.jpg"></a>
-
+            <a href="http://www.smilereminder.com/vs/bieter_eye_center" target="_blank"><img class="img-responsive img-full" id="scheduleappointment" src="images/schedule_appointment.jpg"></a>
+        <div class="facebookContainer">
             <div class="fb-page" id="fb-large" data-href="https://www.facebook.com/Bietereyecenter?ref=ts" data-width="249" data-height="375" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Bietereyecenter?ref=ts"><a href="https://www.facebook.com/Bietereyecenter?ref=ts">Bieter Eye Center</a></blockquote></div></div>
             <div class="fb-page" id="fb-small" data-href="https://www.facebook.com/Bietereyecenter?ref=ts" data-width="180" data-height="450" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Bietereyecenter?ref=ts"><a href="https://www.facebook.com/Bietereyecenter?ref=ts">Bieter Eye Center</a></blockquote></div></div>
         </div>
+        </div>
+    </div>
         
-        <div class="row pushleft">
+        <div class="row col-md-9 col-sm-12 col-xs-12">
             <div class="box">
                 <div class="col-lg-12 text-center">
                     <div id="carousel-example-generic" class="carousel slide">
@@ -159,8 +164,10 @@
                             </div>
                             <div class="item">
                                 <div id="eyewear">
+                                    <div id="eyewearContent">
                                     <h5>Specialty Eyewear</h5>
                                     <p>Ask about our specialty eyewear for skiing, shooting, basketball, swimming and other activities.</p>
+                                    </div>
                                 </div>
                                 <img class="img-responsive img-full" src="images/specialty-eyewear.jpg" alt="">
                         </div>
@@ -200,7 +207,7 @@
         </div>
     </div>
 
-        <div class="row pushleft">
+        <div class="row col-md-9 col-sm-12 col-xs-12">
             <div class="box">
                 <div class="col-lg-12">
                     <hr>

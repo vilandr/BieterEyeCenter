@@ -6,7 +6,7 @@
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../01-whitepaper.png') no-repeat center center fixed;
+    background-image: linear-gradient(to bottom, white, #74C0F2);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -61,7 +61,11 @@ h4 {
     color: #472ebf;
     font-family: cursive;
 }
+.brand>a, .brand>a:hover {
+    text-decoration: inherit;
+    color: inherit;
 
+}
 .navbar-brand {
     text-transform: uppercase;
     font-weight: 900;
@@ -112,6 +116,7 @@ ul.nav.navbar-nav>li>a {
     padding: 30px 15px;
     background: #fff;
     background: rgba(255,255,255,0.9);
+    border-radius: 10px;
 }
 
 .intro-text {
@@ -188,8 +193,53 @@ ul.nav.navbar-nav>li>a {
         height: 300px;
         width: 100%;
     }
-    .caret {
-        display: none;
+    .quoteLeft {
+        position: absolute;
+        display: flex;
+        top: 30px;
+        left: 40px;
+        transform: skewX(10deg);
+        background-color: #472ebf;
+        text-align: center;
+        width: 10%;
+        min-height: 160px;
+    }
+    #quoteLeft, #quoteRight {
+        color: white;
+        padding: 2px 5px;
+        font-size: 12px;
+        margin: auto;
+    }
+    .quoteRight {
+        position: absolute;
+        display: flex;
+        top: 30px;
+        right: 40px;
+        transform: skewX(-10deg);
+        background-color: #472ebf;
+        text-align: center;
+        width: 10%;
+        min-height: 160px;
+    }
+    #scheduleappointment {
+        background-color: white;
+        height: 100px;
+    }
+    .glyphicon:hover {
+        font-size: 16px;
+        transition: 1.0s ease-in-out;
+        transform: rotate(360deg) scale(1.2);
+    }
+    .facebookContainer {
+        text-align: center;
+    }
+    #patientforms:hover {
+        border-bottom: 1px solid #472ebf;
+        text-decoration: none;
+    }
+    a:focus {
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
     }
 @media screen and (max-width: 767px) {
     .brand,
@@ -216,7 +266,7 @@ ul.nav.navbar-nav>li>a {
     .sidebarLinks {
         display: none;
     }
-    #hours {
+    .hours {
         display: none;
     }
     #insuranceimages {
@@ -514,7 +564,7 @@ footer p {
     #frameselection>h5 {
         font-size: 26px;
     }
-    #hours {
+    .hours {
     display: none;
     }
     .navbar {
@@ -640,19 +690,20 @@ footer p {
         font-size: 12px;
         line-height: 1.4;
     }
-    #hours {
-    position: absolute;
+    .hours {
+   /* position: absolute;
     right: 0%;
-    width: 25%;
+    width: 25%;*/
+    padding: 0;
     }
-    #hours>ul {
-        width: 77%;
+    .hours>ul {
+        /*width: 77%;*/
         text-align: center;
         border: 2px solid #472ebf;
         border-radius: 10px;
         margin: auto;  
     }
-    #hours>ul>li {
+    .hours>ul>li {
         list-style-type: none;
         font-size: 13px;
         color: #472ebf;
@@ -731,21 +782,25 @@ footer p {
     #frameselection>h5 {
         font-size: 26px;
     }
-    .sidebarLinks {
+/*    .sidebarLinks {
         position: absolute;
         width: 12%;
         top: 16%;
         right: 10%; 
-    }
+    }*/
     .sidebarLinks>a>img {
         margin: 10px 0;
+        min-width: 50px;
+        width: 80%;
+        height: 85px;
+    }
+    .sidebarLinks>a>img:hover {
+        transition: 1.5s ease-in-out;
+        transform: scale(1.2);
     }
     .sidebarLinks>h5 {
         color: #472ebf;
         font-size: 17px;
-    }
-    .pushleft {
-        width: 77%;
     }
     figcaption {
         text-align: center;
@@ -784,6 +839,24 @@ footer p {
     .eyewear-selection>figure>img {
         height: 350px;
         width: 50%;
+    }
+    #patientforms {
+        color: #472ebf;
+        font-size: 13px;
+        font-family: cursive;
+        padding: 10px 12px;
+        position: relative;
+        display: block;
+        line-height: normal;
+    }
+    .dropdown-menu {
+        left: -95%;
+        font-family: cursive;
+        font-size: 16px;
+        background-color: #472ebf;
+    }
+    .dropdown-menu>li>a {
+        color: #fff;
     }
 
 }
@@ -840,24 +913,25 @@ footer p {
         text-align: center;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         text-transform: uppercase;
-        font-size: 1.25em;
+        font-size: 1em;
         font-weight: 400;
         letter-spacing: 3px;
         color: #472ebf;
     }
-    #hours {
-        position: absolute;
+    .hours {
+       /* position: absolute;
         width: 25%;
-        right: 0%;
+        right: 0%;*/
+        padding: 0;
     }
-    #hours>ul {
-        width: 75%;
+    .hours>ul {
+        /*width: 75%;*/
         text-align: center;
         border: 2px solid #472ebf;
         border-radius: 10px;
         margin: auto;
     }
-    #hours>ul>li {
+    .hours>ul>li {
         list-style-type: none;
         font-size: 14px;
         color: #472ebf;
@@ -866,17 +940,19 @@ footer p {
     }
     #blutech {
         position: absolute;
-        top: 28%;
-        left: 9%;
-        width: 43%;
-        height: 50%;
+        display: flex;
+        flex-direction: column;
+        top: 27%;
+        left: 8%;
+        width: 44%;
+        height: 72%;
     }
     #blutech>h5 {
         color: white;
-        font-size: 16px;
+        font-size: 15px;
     }
     #blutech>p {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 1.4;
     }  
     #infantsee {
@@ -896,16 +972,19 @@ footer p {
     }
     #eyewear {
         position: absolute;
-        top: 5%;
-        right: 1%;
-        width: 46%;
-        height: 42%;
+        display: flex;
+        right: 8%;
+        width: 40%;
+        height: 100%;
     }
-    #eyewear>h5 {
-        color: blue;
+    #eyewearContent {
+        margin: auto;
+    }
+    #eyewearContent>h5 {
+        color: #472ebf;
         font-size: 22px;
     }
-    #eyewear>p {
+    #eyewearContent>p {
         font-size: 18px;
         line-height: 1.4;
     }
@@ -924,22 +1003,30 @@ footer p {
     }
     #frameselection {
         position: absolute;
-        top: 15%;
-        left: 9%;
-        width: 34%;
-        height: 85%;
+        display: flex;
+        width: 39%;
+        height: 100%;
+        margin: 0 0 0 55px;
     }
     #frameselection>h5 {
         font-size: 30px;
+        margin: auto;
     }
-    .sidebarLinks {
+/*    .sidebarLinks {
         position: absolute;
         width: 12%;
         top: 17%;
         right: 10%; 
-    }
+    }*/
     .sidebarLinks>a>img {
-        margin: 10px 0;
+        margin: 10px auto;
+        min-width: 50px;
+        width: 80%;
+        height: 85px;
+    }
+    .sidebarLinks>a>img:hover {
+        transition: 1.5s ease-in-out;
+        transform: scale(1.2);
     }
     .sidebarLinks>h5 {
         color: #472ebf;
@@ -948,10 +1035,6 @@ footer p {
     .staffinfo:nth-child(2n+1) {
         clear: left;
     }
-    .pushleft {
-        width: 77%;
-    }
-
     #visioffice {
         max-height: 500px;
         width: 90%;
@@ -1022,6 +1105,24 @@ footer p {
         height: 375px;
         width: 100%;
     }
+    #patientforms {
+        color: #472ebf;
+        font-size: 17px;
+        font-family: cursive;
+        padding: 10px 12px;
+        position: relative;
+        display: block;
+        line-height: 20px;
+    }
+    .dropdown-menu {
+        left: -95%;
+        font-family: cursive;
+        font-size: 16px;
+        background-color: #472ebf;
+    }
+    .dropdown-menu>li>a {
+        color: #fff;
+    }
 }
 @media screen and (min-width:1200px) {
     .box:after {
@@ -1060,14 +1161,6 @@ footer p {
         position: relative;
         display: block;
         line-height: 20px;
-    }
-    #patientforms:hover {
-        border-bottom: 1px solid #472ebf;
-        text-decoration: none;
-    }
-    a:focus {
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
     }
     .open>a:hover {
         background-color: transparent;
@@ -1108,22 +1201,20 @@ footer p {
         letter-spacing: 3px;
         color: #472ebf;
     }
-    .pushleft {
-        width: 77%;
-    }
-    #hours {
-        position: absolute;
+    .hours {
+        /*position: absolute;
         width: 24%;
-        right: 1%;
+        right: 1%;*/
+        padding: 0;
     }
-    #hours>ul {
-        width: 75%;
+    .hours>ul {
+        /*width: 75%;*/
         text-align: center;
         border: 2px solid #472ebf;
         border-radius: 10px;
         margin: auto;
     }
-    #hours>ul>li {
+    .hours>ul>li {
         list-style-type: none;
         font-size: 16px;
         font-family: cursive;
@@ -1198,14 +1289,21 @@ footer p {
         font-size: 18px;
         line-height: 1.4;
     }
-    .sidebarLinks {
+/*    .sidebarLinks {
         position: absolute;
         width: 12%;
         top: 17%;
         right: 10%;
-    }
+    }*/
     .sidebarLinks>a>img {
-        margin: 10px 0;
+        margin: 10px auto;
+        min-width: 50px;
+        width: 80%;
+        height: 85px;
+    }
+    .sidebarLinks>a>img:hover {
+        transition: 1.5s ease-in-out;
+        transform: scale(1.2);
     }
     .sidebarLinks>h5 {
         color: #472ebf;

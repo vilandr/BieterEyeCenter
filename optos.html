@@ -35,7 +35,7 @@
     <div class="brand">Bieter Eye Center</div>
     <div class="address-bar">8617 W. Pt. Douglas Rd. S. Suite #110 Cottage Grove, MN 55016</div>
     <div class="address-bar">Phone: 651-769-1020 Fax: 651-769-1021</div>
-
+    <div class="address-bar quoteBarDiv"><p id="quoteBar">"We would not go anywhere else."<br>-Isabella M.</p></div>
      <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -75,7 +75,14 @@
                         <a href="promotions.html">Promotions</a>
                     </li>
                     <li>
-                        <a href="patientforms.html">Patient Forms</a>
+                        <div class="dropdown">
+                        <a data-target="#" href="patientforms.html" data-toggle="dropdown" id="patientforms" aria-haspopup="true" aria-expanded="false">Patient Forms<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labeledby="patientforms">
+                            <li><a href="General_Info.pdf">General Patient Information Form</a></li>
+                            <li class="divider"></li>
+                            <li><a href="Patient_Financial_Policy_Form.pdf">Patient Financial Policy Form</a></li>
+                        </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -135,7 +142,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+    <script src="js/bieter.js"></script>
 </body>
 
 </html>

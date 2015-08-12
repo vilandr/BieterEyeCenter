@@ -1,4 +1,4 @@
-var quote1 = '"We would not go anywhere else."<br>-Isabella M';
+var quote1 = '"We would not go anywhere else."<br>-Isabella M.';
 var quote2 = '"Loved my visit, EVERYONE is very friendly and extremely helpful and knowledgeable. Would definately recommend!"<br>-Cheryl M.';
 var quote3 = '"An absolute pleasurable experience. A great office with professional staff that treats you like a true friend."<br>-Dan D.';
 var quote4 = '"Thank you Dr.Beiter for seeing me quickly and retrieving the contact lens I couldn\'t \"find\" in my eye."<br>Paulette H.';
@@ -10,17 +10,72 @@ var quote9 = '"The staff at Bieter Eye Care is always very helpful, especially T
 var quoteArray = [quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8, quote9];
 
 document.addEventListener("DOMContentLoaded", function() {
-	var index = Math.round(Math.random() * (quoteArray.length - 1));
+	// QUOTE BANNERS
 
-	var quoteLeft = document.getElementById('quoteLeft');
-	quoteLeft.innerHTML = quoteArray[index];
+	// var index = Math.round(Math.random() * (quoteArray.length - 1));
 
-	quoteArray.splice(index, 1);
+	// var quoteLeft = document.getElementById('quoteLeft');
+	// quoteLeft.innerHTML = quoteArray[index];
 
-	var index = Math.round(Math.random() * (quoteArray.length - 1));
+	// quoteArray.splice(index, 1);
 
-	var quoteRight = document.getElementById('quoteRight');
-	quoteRight.innerHTML = quoteArray[index];
+	// var index = Math.round(Math.random() * (quoteArray.length - 1));
 
-	quoteArray.splice(index, 1);
+	// var quoteRight = document.getElementById('quoteRight');
+	// quoteRight.innerHTML = quoteArray[index];
+
+	// quoteArray.splice(index, 1);
+
+	// var quoteIndex = Math.round(Math.random() * (quoteArray.length - 1));
+
+
+	//QUOTE BAR LOOP
+
+	var arrayIndex = 1;	
+
+	function callLoop() {
+		setTimeout(function() {
+		loop();
+	}, 10000);
+	}
+	function loop() {
+		var quoteBar = document.getElementById('quoteBar');
+		quoteBar.innerHTML = quoteArray[arrayIndex];
+		console.log(arrayIndex);
+		
+		if (arrayIndex == 8) {
+			arrayIndex = 0;
+			callLoop();
+		} else {
+		arrayIndex++;
+		callLoop();
+	}
+}
+	callLoop();
+
+	// $("ul#quoteBar").cycle({ 
+	// 	fx:'scrollUp',
+	// 	speed:700,
+	// 	timeout:10000,
+	// 	delay:0,
+	// 	pause: true,
+	// 	pauseOnPageHover:true,
+	// });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

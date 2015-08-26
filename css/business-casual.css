@@ -6,19 +6,14 @@
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-image: linear-gradient(to bottom, white, #74C0F2);
+    background-image: linear-gradient(to bottom, white, #c7ccc5);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
     
     font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
@@ -37,11 +32,11 @@ hr {
 }
 h2 {
     font-weight: 900;
-    color: #472ebf;
+    color: #6854ff;
 }
 h4 {
     font-size: 22px;
-    color: #472ebf;
+    color: #6854ff;
 }
 
 #trauma {
@@ -58,8 +53,8 @@ h4 {
 .brand,
 .address-bar {
     display: none;
-    color: #472ebf;
-    font-family: cursive;
+    color: #6854ff;
+    font-family: Big Caslon;
 }
 .brand>a, .brand>a:hover {
     text-decoration: inherit;
@@ -71,16 +66,19 @@ h4 {
     font-weight: 900;
     letter-spacing: 2px;
 }
-
+.navbar-default .navbar-brand {
+    color: #6854ff;
+}
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
 .navbar-nav {
     font-weight: 400;
     letter-spacing: 0px;
     float: none;
     display: inline-block;
 }
-ul.nav.navbar-nav>li>a:hover {
-    border-bottom: 1px solid #472ebf;
-}
+
 ul.nav.navbar-nav>li>a {
     border-bottom: 1px solid transparent;
 }
@@ -163,9 +161,9 @@ ul.nav.navbar-nav>li>a {
     }
     .container>.row>.jumbotron {
         border-radius: 15%;
-        border: 3px dashed #472ebf;
+        border: 3px dashed #6854ff;
         background-color: #f8f8f8;
-        color: #472ebf;
+        color: #6854ff;
     }
     #stafflink {
         text-decoration: none;
@@ -193,34 +191,7 @@ ul.nav.navbar-nav>li>a {
         height: 300px;
         width: 100%;
     }
-    .quoteLeft {
-        position: absolute;
-        display: flex;
-        top: 30px;
-        left: 40px;
-        transform: skewX(10deg);
-        background-color: #472ebf;
-        text-align: center;
-        width: 10%;
-        min-height: 160px;
-    }
-    #quoteLeft, #quoteRight {
-        color: white;
-        padding: 2px 5px;
-        font-size: 12px;
-        margin: auto;
-    }
-    .quoteRight {
-        position: absolute;
-        display: flex;
-        top: 30px;
-        right: 40px;
-        transform: skewX(-10deg);
-        background-color: #472ebf;
-        text-align: center;
-        width: 10%;
-        min-height: 160px;
-    }
+    
     #scheduleappointment {
         background-color: white;
         height: 100px;
@@ -230,18 +201,26 @@ ul.nav.navbar-nav>li>a {
         transition: 1.0s ease-in-out;
         transform: rotate(360deg) scale(1.2);
     }
-    .facebookContainer {
-        text-align: center;
-    }
-    #patientforms:hover {
-        border-bottom: 1px solid #472ebf;
+    #patientforms:hover, ul.nav.navbar-nav>li>a:hover {
+        border-bottom: 1px solid white;
         text-decoration: none;
+        color: #6854ff;
     }
-    a:focus {
+    #patientforms {
+        color: black;
+        padding: 10px 15px;
+        font-size: 14px;
+        line-height: 20px;
+        display: block;
+    }
+    .open>a:focus, .open>#patientforms:focus, .open>a:active, .open>#patientforms:active, .open>a:hover, .open>#patientforms:hover {
+        border: none;
+    }
+   /* a:focus { necessary???
         text-decoration: none;
         border-bottom: 1px solid transparent;
-    }
-    #quoteBar>li {
+    }*/
+    /*#quoteBar>li {
         position: relative;
         margin: auto;
     }
@@ -255,9 +234,15 @@ ul.nav.navbar-nav>li>a {
         font-weight: 100;
         height: 60px;
         margin: 0;
-        color: #472ebf;
+        color: #6854ff;
+    }*/
+    #quoteLeft, #quoteRight {
+        display: none;
     }
 @media screen and (max-width: 767px) {
+    ul>img, ul>li>.glyphicon {
+        display: none;
+    }
     .brand,
     .address-bar {
     display: none;
@@ -288,6 +273,10 @@ ul.nav.navbar-nav>li>a {
     #insuranceimages {
         display: none;
     }
+    body {
+        background-image: none;
+        background-color: #6854ff;
+    }
 }
 
 footer {
@@ -299,39 +288,87 @@ footer p {
     margin: 0;
     padding: 50px 0;
 }
-@media (min-width: 351px) and (max-width: 413px) {
-    #blutech>h5 {
-        color: white;
-        font-size: 11px;
-    }
-}
 @media screen and (max-width: 350px) {
     #blutech>h5 {
         display: none;
     }
 }
-@media screen and (max-width: 319px) {
-    #infantsee {
-        display: none;
-    }
-}
-@media (min-width: 320px) and (max-width: 379px) {
-    #infantsee {
-        position: absolute;
-        top: 6%;
-        right: 4%;
-        width: 45%;
-        height: 35%;
-    }
-    #infantsee>h5 {
-        font-size: 14px;
+@media (min-width: 351px) and (max-width: 413px) {
+    #blutech>h5 {
         color: white;
-    }
-    #infantsee>p {
-        display: none;
+        font-size: 10px;
     }
 }
-@media (min-width: 380px) and (max-width: 529px) {
+@media screen and (max-width: 413px) {
+    #eyewear {
+        position: absolute;
+        top: 15%;
+        right: 11%;
+        width: 36%;
+    }
+    #eyewear>h5 {
+        color: #6854ff;
+        font-size: 16px;
+    }
+    #eyewear>p {
+        display: none;
+    }
+    #infantsee {
+        display: none;
+    }
+    #patientappreciation {
+        position: absolute;
+        top: 13%;
+        left: 13%;
+        width: 44%;   
+    }
+    #patientappreciation>h5 {
+        display: none;
+    }
+    #patientappreciation>p {
+        font-size: 13px;
+    }
+    #frameselection {
+        position: absolute;
+        margin-top: 4%;
+        left: 11%;
+        width: 35%;
+    }
+    #frameselection>h5 {
+        font-size: 11px;
+        margin: 0;
+        line-height: 1;
+    }
+
+}
+@media (min-width: 350px) and (max-width: 529px) {
+    #blutech {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        width: 40%;
+        height: 69%;
+    }
+}
+
+
+@media (min-width: 414px) and (max-width: 529px) {
+    #eyewear {
+        position: absolute;
+        top: 3%;
+        right: 12%;
+        width: 36%;
+        height: 42%;
+    }
+    #eyewear>h5 {
+        color: #6854ff;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    #eyewear>p {
+        font-size: 10px;
+        line-height: 1.2;
+    }
     #infantsee {
         position: absolute;
         top: 8%;
@@ -346,126 +383,123 @@ footer p {
     #infantsee>p {
         display: none;
     }
-}
-@media (min-width: 530px) and (max-width: 767px) {
-    #infantsee {
-        position: absolute;
-        top: 8%;
-        right: 4%;
-        width: 45%;
-        height: 35%;
-    }
-    #infantsee>h5 {
-        font-size: 20px;
-        color: white;
-    } 
-    #infantsee>p {
-        font-size: 10px;
-        line-height: 1.4;
-    }
     #patientappreciation {
         position: absolute;
-        top: 6%;
-        left: 13%;
-        width: 44%;
-        height: 52%;
+        top: 0;
+        width: 48%;
+        left: 12%;
     }
     #patientappreciation>h5 {
-        font-size: 20px;
-        margin: 0;
-    }
-    #patientappreciation>a {
         font-size: 15px;
+    }
+    #patientappreciation>p {
+        font-size: 13px;
+        line-height: 1;
+        margin-bottom: 5px;
     }
     #frameselection {
         position: absolute;
-        top: 15%;
-        left: 9%;
-        width: 34%;
-        height: 85%;
+        margin-top: 6%;
+        left: 11%;
+        width: 35%;
     }
     #frameselection>h5 {
-        font-size: 20px;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1;
+    }
+}
+@media (min-width: 530px) and (max-width: 767px) {
+    #patientappreciation {
+        position: absolute;
+        top: 25%;
+        left: 13%;
+        width: 44%;
+    }
+    #patientappreciation>h5 {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+    #patientappreciation>p {
+        font-size: 13px;
+    }
+    #frameselection {
+        position: absolute;
+        margin-top: 7%;
+        left: 11%;
+        width: 35%;
+    }
+    #frameselection>h5 {
+        font-size: 19px;
+        margin: 0;
+        line-height: 1.4;
     }
     .eyewear-selection>figure>img {
         height: 300px;
         width: 75%;
     }
 }
-@media screen and (max-width: 413px) {
-        #eyewear {
+@media (min-width: 530px) and (max-width: 634px) {
+    #infantsee {
         position: absolute;
-        top: 5%;
-        right: 1%;
-        width: 46%;
-        height: 42%;
+        top: 3%;
+        right: 8%;
+        width: 37%;
+        height: 45%;
     }
-    #eyewear>h5 {
-        color: #472ebf;
-        font-size: 22px;
+    #infantsee>h5 {
+        font-size: 16px;
+        color: white;
+        margin-bottom: 5px;
     }
-    #eyewear>p {
-        display: none;
+    #infantsee>p {
+        font-size: 9px;
     }
-
-}
-@media (min-width: 350px) and (max-width: 529px) {
-    #patientappreciation {
-        position: absolute;
-        top: 0%;
-        left: 13%;
-        width: 44%;
-        height: 100%;
-    }
-    #patientappreciation>h5 {
-        font-size: 11px;
-        margin-top: 10%;
-        margin-bottom: 4%;
-    }
-    #patientappreciation>a {
-        font-size: 10px;
-    }
-    #frameselection {
-        position: absolute;
-        top: 10%;
-        left: 9%;
-        width: 34%;
-        height: 85%;
-    }
-    #frameselection>h5 {
-        font-size: 12px;
-    }
-}
-@media (min-width: 414px) and (max-width: 634px) {
     #eyewear {
         position: absolute;
-        top: 5%;
-        right: 1%;
-        width: 46%;
-        height: 42%;
+        top: 19%;
+        right: 11%;
+        width: 36%;
     }
     #eyewear>h5 {
-        color: #472ebf;
-        font-size: 24px;
+        color: #6854ff;
+        font-size: 16px;
     }
     #eyewear>p {
-        display: none;
+        font-size: 12px;
+        line-height: 1.4;
     }
 }
+
 @media (min-width: 635px) and (max-width: 767px) {
     #eyewear {
         position: absolute;
-        top: 5%;
-        right: 1%;
-        width: 46%;
-        height: 42%;
+        top: 17%;
+        right: 11%;
+        width: 34%;
+        height: 72%;
     }
     #eyewear>h5 {
-        color: #472ebf;
+        color: #6854ff;
         font-size: 18px;
     }
     #eyewear>p {
         font-size: 14px;
+    }
+    #infantsee {
+        position: absolute;
+        top: 14%;
+        right: 8%;
+        width: 37%;
+        height: 34%;
+    }
+    #infantsee>h5 {
+        font-size: 18px;
+        color: white;
+        margin-bottom: 5px;
+    } 
+    #infantsee>p {
+        font-size: 10px;
         line-height: 1.4;
     }
 }
@@ -478,12 +512,11 @@ footer p {
         margin: 0;
         padding: 30px 0 10px;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        font-family: cursive;
+        font-family: Big Caslon;
         font-size: 5em;
         font-weight: 700;
         line-height: normal;
-        color: #472ebf;
+        color: #6854ff;
     }
 
     .top-divider {
@@ -498,18 +531,16 @@ footer p {
     .address-bar {
         display: inherit;
         margin: 0;
-        padding: 0 0 40px;
+        padding: 10px;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        text-transform: uppercase;
         font-size: 1.20em;
         font-weight: 400;
         letter-spacing: 3px;
-        color: #472ebf;
+        color: #6854ff;
     }
     .navbar-default {
-        border-top: 2px solid #472ebf;
-        border-bottom: 2px solid #472ebf;
+        border-top: 2px solid #6854ff;
+        border-bottom: 2px solid #6854ff;
         background-color: transparent;
 }
     #blutech {
@@ -544,18 +575,17 @@ footer p {
     }
     #eyewear {
         position: absolute;
-        top: 5%;
-        right: 1%;
-        width: 46%;
-        height: 42%;
+        top: 25%;
+        right: 11%;
+        width: 35%;
+        height: 45%;
     }
     #eyewear>h5 {
-        color: #472ebf;
-        font-size: 20px;
+        color: #6854ff;
+        font-size: 22px;
     }
     #eyewear>p {
-        font-size: 13px;
-        line-height: 1.4;
+        font-size: 15px;
     }
     #patientappreciation {
         position: absolute;
@@ -572,13 +602,14 @@ footer p {
     }
     #frameselection {
         position: absolute;
-        top: 15%;
-        left: 9%;
-        width: 34%;
-        height: 85%;
+        margin-top: 10%;
+        left: 11%;
+        width: 35%;
     }
     #frameselection>h5 {
-        font-size: 26px;
+        font-size: 24px;
+        margin: 0;
+        line-height: 1.5;
     }
     .hours {
     display: none;
@@ -592,17 +623,47 @@ footer p {
     .navbar {
         min-height: 0;
     }
+    ul>img {
+        position: absolute;
+        width: 100%;
+        height: 35px;
+        left: 0;
+    }
     ul.nav.navbar-nav>li>a {
-        color: #472ebf;
-        font-family: cursive;
+        color: #6854ff;
+        font-family: Big Caslon;
         font-size: 12px;
         line-height: normal;
-        padding: 10px 11px;
+        padding: 10px 7px 6px 8px;
+        display: inline-block;
+        text-decoration: underline;
     }
     ul.nav.navbar-nav>li>a:hover {
-        border-bottom: 1px solid #472ebf;
+        border-bottom: 1px solid white;
     }
-
+    #patientforms {
+        color: #6854ff;
+        font-size: 12px;
+        font-family: Big Caslon;
+        padding: 10px 0 6px 8px;
+        position: relative;
+        display: block;
+        line-height: normal;
+        text-decoration: underline;
+    }
+    .open>a:hover {
+        background-color: transparent;
+        border-color: #6854ff;
+    }
+    .dropdown-menu {
+        left: -135%;
+        font-family: Big Caslon;
+        font-size: 12px;
+        background-color: #6854ff;
+    }
+    .dropdown-menu>li>a {
+        color: #fff;
+    }
     .navbar-nav {
         display: table;
         float: none;
@@ -611,9 +672,7 @@ footer p {
         font-size: 10px;
     }
     .navbar-default {
-        border-top: 2px solid #472ebf;
-        border-bottom: 2px solid #472ebf;
-        background-color: transparent;
+        border: none;
     }
     .sidebarLinks {
         display: none;
@@ -647,12 +706,11 @@ footer p {
         margin: 0;
         padding: 30px 0 10px;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        font-family: cursive;
+        font-family: Big Caslon;
         font-size: 5em;
         font-weight: 700;
         line-height: normal;
-        color: #472ebf;
+        color: #6854ff;
     }
 
     .top-divider {
@@ -667,14 +725,12 @@ footer p {
     .address-bar {
         display: inherit;
         margin: 0;
-        padding: 0 0 40px;
+        padding: 10px;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        text-transform: uppercase;
         font-size: 1.25em;
         font-weight: 400;
         letter-spacing: 3px;
-        color: #472ebf;
+        color: #6854ff;
     }
     #blutech {
         position: absolute;
@@ -693,10 +749,10 @@ footer p {
     } 
     #infantsee {
         position: absolute;
-        top: 9%;
-        right: 4%;
-        width: 45%;
-        height: 35%;
+        top: 18%;
+        right: 9%;
+        width: 37%;
+        height: 30%;
     }
     #infantsee>h5 {
         font-size: 18px;
@@ -715,16 +771,16 @@ footer p {
     .hours>ul {
         /*width: 77%;*/
         text-align: center;
-        border: 2px solid #472ebf;
+        border: 2px solid #6854ff;
         border-radius: 10px;
         margin: auto;  
     }
     .hours>ul>li {
         list-style-type: none;
         font-size: 13px;
-        color: #472ebf;
+        color: #6854ff;
         line-height: 35px;
-        font-family: cursive;
+        font-family: Big Caslon;
     }
     .navbar {
         border-radius: 0;
@@ -735,19 +791,41 @@ footer p {
     .navbar {
         min-height: 0;
     }
-    .nav>li>a {
-        padding: 14px;
-    }
     ul.nav.navbar-nav>li>a {
-        color: #472ebf;
-        font-family: cursive;
+        display: inline-block;
+        color: #6854ff;
+        font-family: Big Caslon;
         font-size: 13px;
+        padding: 10px 10px 5px 10px;
+    }
+    
+    #patientforms {
+        color: #6854ff;
+        font-size: 13px;
+        font-family: Big Caslon;
+        padding: 10px;
+        padding-right: 0;
+        position: relative;
+        display: inline-block;
         line-height: normal;
+        text-decoration: none;
     }
-    ul.nav.navbar-nav>li>a:hover {
-        border-bottom: 1px solid #472ebf;
+    .dropdown-menu {
+        left: -162%;
+        font-family: Big Caslon;
+        font-size: 16px;
+        background-color: #6854ff;
     }
-
+    .dropdown-menu>li>a {
+        color: #fff;
+        font-size: 15px;
+    }
+    ul>img {
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        left: 0;
+    }
     .navbar-nav {
         display: table;
         float: none;
@@ -756,24 +834,21 @@ footer p {
         font-size: 12px;
     }
     .navbar-default {
-        border-top: 2px solid #472ebf;
-        border-bottom: 2px solid #472ebf;
-        background-color: transparent;
+        border: none;
     }
     #eyewear {
         position: absolute;
-        top: 5%;
-        right: 1%;
-        width: 46%;
+        top: 19%;
+        right: 10%;
+        width: 35%;
         height: 42%;
     }
     #eyewear>h5 {
-        color: #472ebf;
-        font-size: 20px;
+        color: #6854ff;
+        font-size: 22px;
     }
     #eyewear>p {
-        font-size: 14px;
-        line-height: 1.4;
+        font-size: 17px;
     }
     #patientappreciation {
         position: absolute;
@@ -790,13 +865,14 @@ footer p {
     }
     #frameselection {
         position: absolute;
-        top: 15%;
-        left: 9%;
-        width: 34%;
-        height: 85%;
+        margin-top: 10%;
+        left: 11%;
+        width: 35%;
     }
     #frameselection>h5 {
         font-size: 26px;
+        margin: 0;
+        line-height: 1.6;
     }
 /*    .sidebarLinks {
         position: absolute;
@@ -815,7 +891,7 @@ footer p {
         transform: scale(1.2);
     }
     .sidebarLinks>h5 {
-        color: #472ebf;
+        color: #6854ff;
         font-size: 17px;
     }
     figcaption {
@@ -824,20 +900,7 @@ footer p {
     #mobileOnlyContactPage {
         display: none;
     }
-    .facebook {
-        position: absolute;
-        width: 20%;
-        bottom: 1.5%;
-        right: 2%;
-    }
-    .facebook>h5 {
-        color: #472ebf;
-        font-size: 20px;
-    }
     #fb-large {
-        display: none;
-    }
-    #fb-btn-small {
         display: none;
     }
     #insuranceimages>img:nth-child(4n+1) {
@@ -856,24 +919,7 @@ footer p {
         height: 350px;
         width: 50%;
     }
-    #patientforms {
-        color: #472ebf;
-        font-size: 13px;
-        font-family: cursive;
-        padding: 10px 12px;
-        position: relative;
-        display: block;
-        line-height: normal;
-    }
-    .dropdown-menu {
-        left: -95%;
-        font-family: cursive;
-        font-size: 16px;
-        background-color: #472ebf;
-    }
-    .dropdown-menu>li>a {
-        color: #fff;
-    }
+    
 
 }
 /* Big 992-1199px */
@@ -889,28 +935,34 @@ footer p {
         margin: 0;
         padding: 30px 0 10px;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        font-family: cursive;
+        font-family: Big Caslon;
         font-size: 5em;
         font-weight: 700;
         line-height: normal;
-        color: #472ebf;
+        color: #6854ff;
     }
     .navbar-brand {
         display: none;
     }
     ul.nav.navbar-nav>li>a {
-        color: #472ebf;
-        font-family: cursive;
-        font-size: 17px;
+        display: inline-block;
+        color: #6854ff;
+        font-family: Big Caslon;
+        font-size: 15px;
         padding: 10px 12px;
     }
     ul.nav.navbar-nav>li>a:hover {
-        border-bottom: 1px solid #472ebf;
+        border-bottom: 1px solid white;
+        color: #6854ff;
+    }
+    ul>img {
+        position: absolute;
+        width: 100%;
+        height: 45px;
+        left: 0;
     }
     .navbar-default {
-        border-top: 2px solid #472ebf;
-        border-bottom: 2px solid #472ebf;
+        border: none;
         background-color: transparent;
     }
     .top-divider {
@@ -925,14 +977,12 @@ footer p {
     .address-bar {
         display: inherit;
         margin: 0;
-        padding: 0 0 40px;
+        padding: 10px;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        text-transform: uppercase;
-        font-size: 1em;
+        font-size: 1.15em;
         font-weight: 400;
         letter-spacing: 3px;
-        color: #472ebf;
+        color: #6854ff;
     }
     .hours {
        /* position: absolute;
@@ -943,24 +993,22 @@ footer p {
     .hours>ul {
         /*width: 75%;*/
         text-align: center;
-        border: 2px solid #472ebf;
+        border: 2px solid #6854ff;
         border-radius: 10px;
         margin: auto;
     }
     .hours>ul>li {
         list-style-type: none;
         font-size: 14px;
-        color: #472ebf;
+        color: #6854ff;
         line-height: 35px;
-        font-family: cursive;
+        font-family: Big Caslon;
     }
     #blutech {
         position: absolute;
-        display: flex;
-        flex-direction: column;
         top: 27%;
-        left: 8%;
-        width: 44%;
+        left: 9%;
+        width: 42%;
         height: 72%;
     }
     #blutech>h5 {
@@ -988,21 +1036,17 @@ footer p {
     }
     #eyewear {
         position: absolute;
-        display: flex;
-        right: 8%;
-        width: 40%;
-        height: 100%;
+        top: 16%;
+        right: 10%;
+        width: 37%;
+        height: 55%;
     }
-    #eyewearContent {
-        margin: auto;
+    #eyewear>h5 {
+        color: #6854ff;
+        font-size: 24px;
     }
-    #eyewearContent>h5 {
-        color: #472ebf;
-        font-size: 22px;
-    }
-    #eyewearContent>p {
-        font-size: 18px;
-        line-height: 1.4;
+    #eyewear>p {
+        font-size: 17px;
     }
     #patientappreciation {
         position: absolute;
@@ -1019,14 +1063,14 @@ footer p {
     }
     #frameselection {
         position: absolute;
-        display: flex;
-        width: 39%;
-        height: 100%;
-        margin: 0 0 0 55px;
+        margin-top: 8%;
+        left: 11%;
+        width: 35%;
     }
     #frameselection>h5 {
-        font-size: 30px;
-        margin: auto;
+        font-size: 27px;
+        margin: 0;
+        line-height: 1.6;
     }
 /*    .sidebarLinks {
         position: absolute;
@@ -1045,7 +1089,7 @@ footer p {
         transform: scale(1.2);
     }
     .sidebarLinks>h5 {
-        color: #472ebf;
+        color: #6854ff;
         font-size: 20px;
     }
     .staffinfo:nth-child(2n+1) {
@@ -1072,16 +1116,6 @@ footer p {
     }
     #mobileOnlyContactPage {
         display: none;
-    }
-    .facebook {
-        position: absolute;
-        width: 20%;
-        bottom: 1.5%;
-        right: 2%;
-    }
-    .facebook>h5 {
-        color: #472ebf;
-        font-size: 20px;
     }
     #fb-large {
         display: none;
@@ -1122,22 +1156,47 @@ footer p {
         width: 100%;
     }
     #patientforms {
-        color: #472ebf;
-        font-size: 17px;
-        font-family: cursive;
+        color: #6854ff;
+        font-size: 15px;
+        font-family: Big Caslon;
         padding: 10px 12px;
         position: relative;
         display: block;
         line-height: 20px;
+        padding-right: 0;
+        text-decoration: none;
     }
     .dropdown-menu {
-        left: -95%;
-        font-family: cursive;
-        font-size: 16px;
-        background-color: #472ebf;
+        left: -129%;
+        font-family: Big Caslon;
+        font-size: 15px;
+        background-color: #6854ff;
     }
     .dropdown-menu>li>a {
         color: #fff;
+    }
+    #quoteLeft, #quoteRight {
+        position: absolute;
+        top: 25px;    
+        background-color: #6854ff;
+        text-align: center;
+        width: 10%;
+        min-height: 160px;
+        display: flex;
+    }
+    #quoteLeft {
+        left: 40px;
+        transform: skewX(10deg);
+    }
+    #quoteRight {
+        right: 40px;
+        transform: skewX(-10deg);
+    }
+    #quoteLeft>#quoteTextLeft, #quoteRight>#quoteTextRight {
+        color: white;
+        padding: 2px 5px;
+        font-size: 10.5px;
+        margin: auto;
     }
 }
 @media screen and (min-width:1200px) {
@@ -1151,49 +1210,58 @@ footer p {
         margin: 0;
         padding: 30px 0 10px;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        font-family: cursive;
+        font-family: Big Caslon;
         font-size: 5em;
         font-weight: 700;
         line-height: normal;
-        color: #472ebf;
+        color: #6854ff;
+        
     }
     .navbar-brand {
         display: none;
     }
+    ul>img {
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        left: 0;
+    }
     ul.nav.navbar-nav>li>a {
-        color: #472ebf;
-        font-family: cursive;
+        color: #6854ff;
+        font-family: Big Caslon;
         font-size: 18px;
+        display: inline-block;
+        padding-bottom: 10px;
     }
     ul.nav.navbar-nav>li>a:hover {
-        border-bottom: 1px solid #472ebf;
+        border-bottom: 1px solid white;
+        color: #6854ff;
     }
     #patientforms {
-        color: #472ebf;
+        color: #6854ff;
         font-size: 18px;
-        font-family: cursive;
-        padding: 15px;
+        font-family: Big Caslon;
+        padding: 15px 15px 10px 15px;
         position: relative;
         display: block;
         line-height: 20px;
+        text-decoration: none;
     }
     .open>a:hover {
         background-color: transparent;
-        border-color: #472ebf;
+        border-color: #6854ff;
     }
     .dropdown-menu {
         left: -95%;
-        font-family: cursive;
+        font-family: Big Caslon;
         font-size: 16px;
-        background-color: #472ebf;
+        background-color: #6854ff;
     }
     .dropdown-menu>li>a {
         color: #fff;
     }
     .navbar-default {
-        border-top: 2px solid #472ebf;
-        border-bottom: 2px solid #472ebf;
+        border: none;
         background-color: transparent;
     }
     .top-divider {
@@ -1208,14 +1276,12 @@ footer p {
     .address-bar {
         display: inherit;
         margin: 0;
-        padding: 0 0 40px;
+        padding: 10px;
         text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        text-transform: uppercase;
         font-size: 1.25em;
         font-weight: 600;
         letter-spacing: 3px;
-        color: #472ebf;
+        color: #6854ff;
     }
     .hours {
         /*position: absolute;
@@ -1226,23 +1292,23 @@ footer p {
     .hours>ul {
         /*width: 75%;*/
         text-align: center;
-        border: 2px solid #472ebf;
+        border: 2px solid #6854ff;
         border-radius: 10px;
         margin: auto;
     }
     .hours>ul>li {
         list-style-type: none;
         font-size: 16px;
-        font-family: cursive;
-        color: #472ebf;
+        font-family: Big Caslon;
+        color: #6854ff;
         line-height: 35px;
     }
     #blutech {
         position: absolute;
-        top: 32%;
-        left: 9%;
-        width: 43%;
-        height: 50%;
+        top: 27%;
+        left: 8%;
+        width: 44%;
+        height: 72%;
     }
     #blutech>h5 {
         color: white;
@@ -1255,8 +1321,8 @@ footer p {
     #infantsee {
         position: absolute;
         top: 11%;
-        right: 4%;
-        width: 45%;
+        right: 9%;
+        width: 36%;
         height: 35%;
     }
     #infantsee>h5 {
@@ -1269,21 +1335,24 @@ footer p {
     }
     #eyewear {
         position: absolute;
-        top: 5%;
-        right: 1%;
-        width: 46%;
-        height: 42%;
+        top: 20%;
+        right: 9%;
+        width: 38%;
+        height: 55%;
     }
     #eyewear>h5 {
-        color: #472ebf;
-        font-size: 22px;
+        color: #6854ff;
+        font-size: 24px;
+    }
+    #eyewear>p {
+        font-size: 18px;
+        line-height: 1.8;
     }
     #patientappreciation {
         position: absolute;
         top: 15%;
         left: 13%;
         width: 40%;
-        height: 40%;
     }
     #patientappreciation>h5 {
         font-size: 30px;
@@ -1293,13 +1362,14 @@ footer p {
     }
     #frameselection {
         position: absolute;
-        top: 15%;
-        left: 9%;
-        width: 34%;
-        height: 85%;
+        margin-top: 8%;
+        left: 11%;
+        width: 35%;
     }
     #frameselection>h5 {
         font-size: 30px;
+        margin: 0;
+        line-height: 1.6;
     }
     #eyewear>p {
         font-size: 18px;
@@ -1322,7 +1392,7 @@ footer p {
         transform: scale(1.2);
     }
     .sidebarLinks>h5 {
-        color: #472ebf;
+        color: #6854ff;
         font-size: 20px;
     }
     .staffinfo:nth-child(3n+2) {
@@ -1370,16 +1440,6 @@ footer p {
     #mobileOnlyContactPage {
         display: none;
     }
-    .facebook {
-        position: absolute;
-        width: 20%;
-        bottom: 1.5%;
-        right: 2%;
-    }
-    .facebook>h5 {
-        color: #472ebf;
-        font-size: 20px;
-    }
     #fb-small {
         display: none;
     }
@@ -1418,7 +1478,7 @@ footer p {
         height: 375px;
         width: 100%;
     }
-    #quoteBar>li {
+    /*#quoteBar>li {
         position: relative;
         margin: auto;
     }
@@ -1432,13 +1492,101 @@ footer p {
         font-weight: 100;
         height: 60px;
         margin: 0;
-        color: #472ebf;
+        color: #6854ff;
+    }*/
+    #quoteLeft, #quoteRight {
+        position: absolute;
+        top: 25px;
+        background-color: #6854ff;
+        text-align: center;
+        width: 10%;
+        min-height: 160px;
+        display: flex;
     }
+    #quoteLeft {
+        left: 40px;
+        transform: skewX(10deg);
+    }
+    #quoteRight {
+        right: 40px;
+        transform: skewX(-10deg);
+    }
+    #quoteLeft>#quoteTextLeft, #quoteRight>#quoteTextRight {
+        color: white;
+        padding: 2px 5px;
+        font-size: 11.5px;
+        margin: auto;
+    }
+    
 }
-@media screen and (min-width: 1378px) {
-
-    #fb-btn-small {
-        display: none;
+@media screen and (min-width: 1500px) {
+    #blutech {
+        position: absolute;
+        top: 32%;
+        left: 9%;
+        width: 42%;
+        height: 72%;
+    }
+    #blutech>h5 {
+        color: white;
+        font-size: 24px;
+    }
+    #blutech>p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+    #infantsee {
+        position: absolute;
+        top: 17%;
+        right: 10%;
+        width: 34%;
+        height: 33%;
+    }
+    #infantsee>h5 {
+        font-size: 26px;
+        color: white;
+    } 
+    #infantsee>p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+    #eyewear {
+        position: absolute;
+        top: 20%;
+        right: 9%;
+        width: 38%;
+        height: 55%;
+    }
+    #eyewear>h5 {
+        color: #6854ff;
+        font-size: 30px;
+    }
+    #eyewear>p {
+        font-size: 20px;
+        line-height: 2.0;
+    }
+    #patientappreciation {
+        position: absolute;
+        top: 20%;
+        left: 11%;
+        width: 44%;
+    }
+    #patientappreciation>h5 {
+        font-size: 36px;
+    }
+    #patientappreciation>p {
+        font-size: 26px;
+    }
+    #frameselection {
+        position: absolute;
+        margin-top: 12%;
+        left: 11%;
+        width: 35%;
+    }
+    #frameselection>h5 {
+        font-size: 34px;
+        margin: 0;
+        line-height: 1.6;
     }
 }
 /* Very Big over 1200px */

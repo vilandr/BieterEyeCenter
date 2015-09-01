@@ -6,7 +6,8 @@
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-image: linear-gradient(to bottom, white, #c7ccc5);
+    background-color: #779ecb;
+    /*background-image: linear-gradient(to bottom, white, #c7ccc5);*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -32,13 +33,17 @@ hr {
 }
 h2 {
     font-weight: 900;
-    color: #6854ff;
+    color: #779ecb;
 }
 h4 {
     font-size: 22px;
-    color: #6854ff;
+    color: #779ecb;
 }
-
+.hours>ul>h4 {
+    color: #fdfd96;
+    font-family: Big Caslon;
+    text-decoration: underline;
+}
 #trauma {
     list-style: none;
 }
@@ -53,7 +58,7 @@ h4 {
 .brand,
 .address-bar {
     display: none;
-    color: #6854ff;
+    color: #FDFD96;
     font-family: Big Caslon;
 }
 .brand>a, .brand>a:hover {
@@ -67,10 +72,11 @@ h4 {
     letter-spacing: 2px;
 }
 .navbar-default .navbar-brand {
-    color: #6854ff;
+    color: #779ecb;
+    border: none;
 }
 .navbar-default .navbar-nav>li>a {
-    color: black;
+    color: #779ecb;
 }
 .navbar-nav {
     font-weight: 400;
@@ -136,6 +142,7 @@ ul.nav.navbar-nav>li>a {
 }
     #staffphoto {
         width: 100%;
+        margin-bottom: 25px;
     }
     .staffinfo, .doctorinfo {
         text-align: center;
@@ -160,10 +167,10 @@ ul.nav.navbar-nav>li>a {
         list-style: none;
     }
     .container>.row>.jumbotron {
-        border-radius: 15%;
-        border: 3px dashed #6854ff;
-        background-color: #f8f8f8;
-        color: #6854ff;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    .container>.row>.jumbotron>h1 {
+        color: #779ecb;
     }
     #stafflink {
         text-decoration: none;
@@ -202,12 +209,12 @@ ul.nav.navbar-nav>li>a {
         transform: rotate(360deg) scale(1.2);
     }
     #patientforms:hover, ul.nav.navbar-nav>li>a:hover {
-        border-bottom: 1px solid white;
-        text-decoration: none;
-        color: #6854ff;
+        border: none;
+        text-decoration: underline;
+        color: #779ecb;
     }
     #patientforms {
-        color: black;
+        color: #779ecb;
         padding: 10px 15px;
         font-size: 14px;
         line-height: 20px;
@@ -234,11 +241,33 @@ ul.nav.navbar-nav>li>a {
         font-weight: 100;
         height: 60px;
         margin: 0;
-        color: #6854ff;
+        color: #FDFD96;
     }*/
     #quoteLeft, #quoteRight {
         display: none;
     }
+    .facebookContainer {
+        text-align: center;
+    }
+    .carousel-indicators li {
+        background-color: black;
+    }
+    .carousel-indicators .active {
+        background-color: #779ecb;
+    }
+footer {
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+footer p {
+    margin: 0;
+    padding: 50px 0;
+}
+#buildingPhoto {
+    width: 275px;
+    height: 200px;
+}
 @media screen and (max-width: 767px) {
     ul>img, ul>li>.glyphicon {
         display: none;
@@ -275,22 +304,16 @@ ul.nav.navbar-nav>li>a {
     }
     body {
         background-image: none;
-        background-color: #6854ff;
+        background-color: #779ecb;
     }
-}
-
-footer {
-    background: #fff;
-    background: rgba(255,255,255,0.9);
-}
-
-footer p {
-    margin: 0;
-    padding: 50px 0;
 }
 @media screen and (max-width: 350px) {
     #blutech>h5 {
         display: none;
+    }
+    #buildingPhoto {
+        width: 240px;
+        height: 150px;
     }
 }
 @media (min-width: 351px) and (max-width: 413px) {
@@ -307,7 +330,7 @@ footer p {
         width: 36%;
     }
     #eyewear>h5 {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 16px;
     }
     #eyewear>p {
@@ -335,11 +358,15 @@ footer p {
         width: 35%;
     }
     #frameselection>h5 {
+        color: #fdfd96;
         font-size: 11px;
         margin: 0;
         line-height: 1;
     }
-
+    .exam-room>figure>img {
+        height: 250px;
+        width: 100%;
+    }
 }
 @media (min-width: 350px) and (max-width: 529px) {
     #blutech {
@@ -361,7 +388,7 @@ footer p {
         height: 42%;
     }
     #eyewear>h5 {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 14px;
         margin-bottom: 5px;
     }
@@ -391,6 +418,7 @@ footer p {
     }
     #patientappreciation>h5 {
         font-size: 15px;
+        color: #fdfd96;
     }
     #patientappreciation>p {
         font-size: 13px;
@@ -404,9 +432,14 @@ footer p {
         width: 35%;
     }
     #frameselection>h5 {
+        color: #fdfd96;
         font-size: 15px;
         margin: 0;
         line-height: 1;
+    }
+    .exam-room>figure>img {
+        height: 250px;
+        width: 80%;
     }
 }
 @media (min-width: 530px) and (max-width: 767px) {
@@ -419,6 +452,7 @@ footer p {
     #patientappreciation>h5 {
         font-size: 17px;
         margin-bottom: 5px;
+        color: #fdfd96;
     }
     #patientappreciation>p {
         font-size: 13px;
@@ -430,6 +464,7 @@ footer p {
         width: 35%;
     }
     #frameselection>h5 {
+        color: #fdfd96;
         font-size: 19px;
         margin: 0;
         line-height: 1.4;
@@ -437,6 +472,10 @@ footer p {
     .eyewear-selection>figure>img {
         height: 300px;
         width: 75%;
+    }
+    .exam-room>figure>img {
+        height: 250px;
+        width: 60%;
     }
 }
 @media (min-width: 530px) and (max-width: 634px) {
@@ -462,7 +501,7 @@ footer p {
         width: 36%;
     }
     #eyewear>h5 {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 16px;
     }
     #eyewear>p {
@@ -480,7 +519,7 @@ footer p {
         height: 72%;
     }
     #eyewear>h5 {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 18px;
     }
     #eyewear>p {
@@ -512,13 +551,9 @@ footer p {
         margin: 0;
         padding: 30px 0 10px;
         text-align: center;
-        font-family: Big Caslon;
-        font-size: 5em;
-        font-weight: 700;
-        line-height: normal;
-        color: #6854ff;
+        font: italic 700 5em/normal Big Caslon;
+        color: #FDFD96;
     }
-
     .top-divider {
         margin-top: 0;
     }
@@ -533,15 +568,14 @@ footer p {
         margin: 0;
         padding: 10px;
         text-align: center;
-        font-size: 1.20em;
-        font-weight: 400;
+        font: italic 400 1.2em Big Caslon;
         letter-spacing: 3px;
-        color: #6854ff;
+        color: #FDFD96;
     }
     .navbar-default {
-        border-top: 2px solid #6854ff;
-        border-bottom: 2px solid #6854ff;
-        background-color: transparent;
+        /*border-top: 2px solid #FDFD96;
+        border-bottom: 2px solid #FDFD96;*/
+        background: rgba(255, 255, 255, 0.9);
 }
     #blutech {
         position: absolute;
@@ -581,7 +615,7 @@ footer p {
         height: 45%;
     }
     #eyewear>h5 {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 22px;
     }
     #eyewear>p {
@@ -596,6 +630,7 @@ footer p {
     }
     #patientappreciation>h5 {
         font-size: 26px;
+        color: #fdfd96;
     }
     #patientappreciation>a {
         font-size: 16px;
@@ -607,6 +642,7 @@ footer p {
         width: 35%;
     }
     #frameselection>h5 {
+        color: #fdfd96;
         font-size: 24px;
         margin: 0;
         line-height: 1.5;
@@ -620,49 +656,47 @@ footer p {
     .navbar-header {
         display: none;
     }
-    .navbar {
+    /*.navbar {
         min-height: 0;
-    }
-    ul>img {
+    }*/
+    /*ul>img {
         position: absolute;
         width: 100%;
         height: 35px;
         left: 0;
-    }
+    }*/
     ul.nav.navbar-nav>li>a {
-        color: #6854ff;
+        color: #779ecb;
         font-family: Big Caslon;
         font-size: 12px;
-        line-height: normal;
-        padding: 10px 7px 6px 8px;
+        line-height: 20px;
+        padding: 15px 7px 6px 8px;
         display: inline-block;
         text-decoration: underline;
     }
-    ul.nav.navbar-nav>li>a:hover {
-        border-bottom: 1px solid white;
-    }
+    
     #patientforms {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 12px;
         font-family: Big Caslon;
-        padding: 10px 0 6px 8px;
+        padding: 15px 0 6px 8px;
         position: relative;
         display: block;
-        line-height: normal;
+        line-height: 20px;
         text-decoration: underline;
     }
     .open>a:hover {
         background-color: transparent;
-        border-color: #6854ff;
+        border-color: #FDFD96;
     }
     .dropdown-menu {
         left: -135%;
         font-family: Big Caslon;
         font-size: 12px;
-        background-color: #6854ff;
+        background-color: #779ecb;
     }
     .dropdown-menu>li>a {
-        color: #fff;
+        color: #fdfd96;
     }
     .navbar-nav {
         display: table;
@@ -671,16 +705,16 @@ footer p {
         table-layout: fixed;
         font-size: 10px;
     }
-    .navbar-default {
+    /*.navbar-default {
         border: none;
-    }
+    }*/
     .sidebarLinks {
         display: none;
     }
     figcaption {
         text-align: center;
     }
-    #mobileOnlyContactPage {
+   .navbar-nav>.mobileOnly {
         display: none;
     }
     #insuranceimages>img:nth-child(4n+1) {
@@ -699,6 +733,10 @@ footer p {
         height: 325px;
         width: 50%;
     }
+    #staffphoto {
+        width: 75%;
+        margin: 0 auto;
+    }
 }
 @media (min-width: 869px) and (max-width:991px) {
     .brand {
@@ -706,31 +744,24 @@ footer p {
         margin: 0;
         padding: 30px 0 10px;
         text-align: center;
-        font-family: Big Caslon;
-        font-size: 5em;
-        font-weight: 700;
-        line-height: normal;
-        color: #6854ff;
+        font: italic 700 5em/normal Big Caslon;
+        color: #FDFD96;
     }
-
     .top-divider {
         margin-top: 0;
     }
-
     .img-left {
         float: left;
         margin-right: 25px;
     }
-
     .address-bar {
         display: inherit;
         margin: 0;
         padding: 10px;
         text-align: center;
-        font-size: 1.25em;
-        font-weight: 400;
+        font: italic 400 1.25em Big Caslon;
         letter-spacing: 3px;
-        color: #6854ff;
+        color: #FDFD96;
     }
     #blutech {
         position: absolute;
@@ -771,14 +802,12 @@ footer p {
     .hours>ul {
         /*width: 77%;*/
         text-align: center;
-        border: 2px solid #6854ff;
-        border-radius: 10px;
         margin: auto;  
     }
     .hours>ul>li {
         list-style-type: none;
         font-size: 13px;
-        color: #6854ff;
+        color: #FDFD96;
         line-height: 35px;
         font-family: Big Caslon;
     }
@@ -788,36 +817,39 @@ footer p {
     .navbar-header {
         display: none;
     }
-    .navbar {
+    /*.navbar {
         min-height: 0;
-    }
+    }*/
     ul.nav.navbar-nav>li>a {
         display: inline-block;
-        color: #6854ff;
+        color: #779ecb;
         font-family: Big Caslon;
         font-size: 13px;
-        padding: 10px 10px 5px 10px;
+        padding: 15px 10px 5px 10px;
     }
-    
+    ul.nav.navbar-nav>li>a:hover, #patientforms:hover {
+        border-bottom: 1px solid #779ecb;
+        color: #779ecb;
+        text-decoration: none;
+    }
     #patientforms {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 13px;
         font-family: Big Caslon;
-        padding: 10px;
-        padding-right: 0;
+        padding: 15px 0 5px 10px;
         position: relative;
         display: inline-block;
-        line-height: normal;
+        line-height: 20px;
         text-decoration: none;
     }
     .dropdown-menu {
         left: -162%;
         font-family: Big Caslon;
         font-size: 16px;
-        background-color: #6854ff;
+        background-color: #779ecb;
     }
     .dropdown-menu>li>a {
-        color: #fff;
+        color: #fdfd96;
         font-size: 15px;
     }
     ul>img {
@@ -833,9 +865,9 @@ footer p {
         table-layout: fixed;
         font-size: 12px;
     }
-    .navbar-default {
+    /*.navbar-default {
         border: none;
-    }
+    }*/
     #eyewear {
         position: absolute;
         top: 19%;
@@ -844,7 +876,7 @@ footer p {
         height: 42%;
     }
     #eyewear>h5 {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 22px;
     }
     #eyewear>p {
@@ -859,6 +891,7 @@ footer p {
     }
     #patientappreciation>h5 {
         font-size: 26px;
+        color: #fdfd96;
     }
     #patientappreciation>a {
         font-size: 16px;
@@ -870,6 +903,7 @@ footer p {
         width: 35%;
     }
     #frameselection>h5 {
+        color: #fdfd96;
         font-size: 26px;
         margin: 0;
         line-height: 1.6;
@@ -891,13 +925,13 @@ footer p {
         transform: scale(1.2);
     }
     .sidebarLinks>h5 {
-        color: #6854ff;
+        color: #FDFD96;
         font-size: 17px;
     }
     figcaption {
         text-align: center;
     }
-    #mobileOnlyContactPage {
+   .navbar-nav>.mobileOnly {
         display: none;
     }
     #fb-large {
@@ -919,8 +953,10 @@ footer p {
         height: 350px;
         width: 50%;
     }
-    
-
+    #staffphoto {
+        width: 75%;
+        margin: 0 auto;
+    }
 }
 /* Big 992-1199px */
 
@@ -935,25 +971,23 @@ footer p {
         margin: 0;
         padding: 30px 0 10px;
         text-align: center;
-        font-family: Big Caslon;
-        font-size: 5em;
-        font-weight: 700;
-        line-height: normal;
-        color: #6854ff;
+        font: italic 700 5em/normal Big Caslon;
+        color: #FDFD96;
     }
     .navbar-brand {
         display: none;
     }
     ul.nav.navbar-nav>li>a {
         display: inline-block;
-        color: #6854ff;
+        color: #779ecb;
         font-family: Big Caslon;
         font-size: 15px;
-        padding: 10px 12px;
+        padding: 15px 12px 6px 11px;
     }
-    ul.nav.navbar-nav>li>a:hover {
-        border-bottom: 1px solid white;
-        color: #6854ff;
+    ul.nav.navbar-nav>li>a:hover, #patientforms:hover {
+        border-bottom: 1px solid #779ecb;
+        color: #779ecb;
+        text-decoration: none;
     }
     ul>img {
         position: absolute;
@@ -962,8 +996,8 @@ footer p {
         left: 0;
     }
     .navbar-default {
-        border: none;
-        background-color: transparent;
+        /*border: none;*/
+        background: rgba(255, 255, 255, 0.9);
     }
     .top-divider {
         margin-top: 0;
@@ -979,10 +1013,9 @@ footer p {
         margin: 0;
         padding: 10px;
         text-align: center;
-        font-size: 1.15em;
-        font-weight: 400;
+        font: italic 600 1.15em Big Caslon;
         letter-spacing: 3px;
-        color: #6854ff;
+        color: #FDFD96;
     }
     .hours {
        /* position: absolute;
@@ -993,14 +1026,12 @@ footer p {
     .hours>ul {
         /*width: 75%;*/
         text-align: center;
-        border: 2px solid #6854ff;
-        border-radius: 10px;
         margin: auto;
     }
     .hours>ul>li {
         list-style-type: none;
         font-size: 14px;
-        color: #6854ff;
+        color: #FDFD96;
         line-height: 35px;
         font-family: Big Caslon;
     }
@@ -1042,7 +1073,7 @@ footer p {
         height: 55%;
     }
     #eyewear>h5 {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 24px;
     }
     #eyewear>p {
@@ -1057,6 +1088,7 @@ footer p {
     }
     #patientappreciation>h5 {
         font-size: 30px;
+        color: #fdfd96;
     }
     #patientappreciation>a {
         font-size: 20px;
@@ -1068,6 +1100,7 @@ footer p {
         width: 35%;
     }
     #frameselection>h5 {
+        color: #fdfd96;
         font-size: 27px;
         margin: 0;
         line-height: 1.6;
@@ -1089,7 +1122,7 @@ footer p {
         transform: scale(1.2);
     }
     .sidebarLinks>h5 {
-        color: #6854ff;
+        color: #FDFD96;
         font-size: 20px;
     }
     .staffinfo:nth-child(2n+1) {
@@ -1114,7 +1147,7 @@ footer p {
         width: 120px;
         margin: 10px;
     }
-    #mobileOnlyContactPage {
+   .navbar-nav>.mobileOnly {
         display: none;
     }
     #fb-large {
@@ -1156,29 +1189,28 @@ footer p {
         width: 100%;
     }
     #patientforms {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 15px;
         font-family: Big Caslon;
-        padding: 10px 12px;
+        padding: 15px 0px 6px 11px;
         position: relative;
         display: block;
         line-height: 20px;
-        padding-right: 0;
         text-decoration: none;
     }
     .dropdown-menu {
         left: -129%;
         font-family: Big Caslon;
         font-size: 15px;
-        background-color: #6854ff;
+        background-color: #779ecb;
     }
     .dropdown-menu>li>a {
-        color: #fff;
+        color: #fdfd96;
     }
     #quoteLeft, #quoteRight {
         position: absolute;
         top: 25px;    
-        background-color: #6854ff;
+        background-color: #FDFD96;
         text-align: center;
         width: 10%;
         min-height: 160px;
@@ -1193,11 +1225,15 @@ footer p {
         transform: skewX(-10deg);
     }
     #quoteLeft>#quoteTextLeft, #quoteRight>#quoteTextRight {
-        color: white;
+        color: #779ecb;
         padding: 2px 5px;
         font-size: 10.5px;
         margin: auto;
     }
+    /*#buildingPhoto {
+        width: 95%;
+        height: 255px;
+    }*/
 }
 @media screen and (min-width:1200px) {
     .box:after {
@@ -1210,35 +1246,32 @@ footer p {
         margin: 0;
         padding: 30px 0 10px;
         text-align: center;
-        font-family: Big Caslon;
-        font-size: 5em;
-        font-weight: 700;
-        line-height: normal;
-        color: #6854ff;
-        
+        font: italic 700 5em/normal Big Caslon;
+        color: #FDFD96;
     }
     .navbar-brand {
         display: none;
     }
-    ul>img {
+    /*ul>img {
         position: absolute;
         width: 100%;
         height: 50px;
         left: 0;
-    }
+    }*/
     ul.nav.navbar-nav>li>a {
-        color: #6854ff;
+        color: #779ecb;
         font-family: Big Caslon;
         font-size: 18px;
         display: inline-block;
         padding-bottom: 10px;
     }
-    ul.nav.navbar-nav>li>a:hover {
-        border-bottom: 1px solid white;
-        color: #6854ff;
+    ul.nav.navbar-nav>li>a:hover, #patientforms:hover {
+        border-bottom: 1px solid #779ecb;
+        color: #779ecb;
+        text-decoration: none;
     }
     #patientforms {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 18px;
         font-family: Big Caslon;
         padding: 15px 15px 10px 15px;
@@ -1247,22 +1280,23 @@ footer p {
         line-height: 20px;
         text-decoration: none;
     }
+    
     .open>a:hover {
         background-color: transparent;
-        border-color: #6854ff;
+        border-color: #779ecb;
     }
     .dropdown-menu {
         left: -95%;
         font-family: Big Caslon;
         font-size: 16px;
-        background-color: #6854ff;
+        background-color: #779ecb;
     }
     .dropdown-menu>li>a {
-        color: #fff;
+        color: #FDFD96;
     }
     .navbar-default {
-        border: none;
-        background-color: transparent;
+        /*border: none;*/
+        background: rgba(255, 255, 255, 0.9);
     }
     .top-divider {
         margin-top: 0;
@@ -1277,11 +1311,13 @@ footer p {
         display: inherit;
         margin: 0;
         padding: 10px;
+        font: italic 600 1.25em/normal Big Caslon;
         text-align: center;
-        font-size: 1.25em;
+        /*font-size: 1.25em;
         font-weight: 600;
+        font-style: italic;*/
         letter-spacing: 3px;
-        color: #6854ff;
+        color: #FDFD96;
     }
     .hours {
         /*position: absolute;
@@ -1292,15 +1328,13 @@ footer p {
     .hours>ul {
         /*width: 75%;*/
         text-align: center;
-        border: 2px solid #6854ff;
-        border-radius: 10px;
         margin: auto;
     }
     .hours>ul>li {
         list-style-type: none;
         font-size: 16px;
         font-family: Big Caslon;
-        color: #6854ff;
+        color: #FDFD96;
         line-height: 35px;
     }
     #blutech {
@@ -1341,7 +1375,7 @@ footer p {
         height: 55%;
     }
     #eyewear>h5 {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 24px;
     }
     #eyewear>p {
@@ -1356,6 +1390,7 @@ footer p {
     }
     #patientappreciation>h5 {
         font-size: 30px;
+        color: #fdfd96;
     }
     #patientappreciation>a {
         font-size: 20px;
@@ -1367,6 +1402,7 @@ footer p {
         width: 35%;
     }
     #frameselection>h5 {
+        color: #fdfd96;
         font-size: 30px;
         margin: 0;
         line-height: 1.6;
@@ -1392,7 +1428,7 @@ footer p {
         transform: scale(1.2);
     }
     .sidebarLinks>h5 {
-        color: #6854ff;
+        color: #FDFD96;
         font-size: 20px;
     }
     .staffinfo:nth-child(3n+2) {
@@ -1437,7 +1473,7 @@ footer p {
         height: 250px;
         width: 200px;
     }
-    #mobileOnlyContactPage {
+    .navbar-nav>.mobileOnly {
         display: none;
     }
     #fb-small {
@@ -1492,12 +1528,12 @@ footer p {
         font-weight: 100;
         height: 60px;
         margin: 0;
-        color: #6854ff;
+        color: #FDFD96;
     }*/
     #quoteLeft, #quoteRight {
         position: absolute;
         top: 25px;
-        background-color: #6854ff;
+        background-color: #FDFD96;
         text-align: center;
         width: 10%;
         min-height: 160px;
@@ -1512,14 +1548,22 @@ footer p {
         transform: skewX(-10deg);
     }
     #quoteLeft>#quoteTextLeft, #quoteRight>#quoteTextRight {
-        color: white;
+        color: #779ecb;
         padding: 2px 5px;
         font-size: 11.5px;
         margin: auto;
     }
-    
+    /*#buildingPhoto {
+        width: 95%;
+        height: 255px;
+    }*/
 }
 @media screen and (min-width: 1500px) {
+    #patientforms:hover, ul.nav.navbar-nav>li>a:hover {
+        border-bottom: 1px solid #779ecb;
+        text-decoration: none;
+        color: #779ecb;
+    }
     #blutech {
         position: absolute;
         top: 32%;
@@ -1558,7 +1602,7 @@ footer p {
         height: 55%;
     }
     #eyewear>h5 {
-        color: #6854ff;
+        color: #779ecb;
         font-size: 30px;
     }
     #eyewear>p {
@@ -1573,6 +1617,7 @@ footer p {
     }
     #patientappreciation>h5 {
         font-size: 36px;
+        color: #fdfd96;
     }
     #patientappreciation>p {
         font-size: 26px;
@@ -1584,10 +1629,15 @@ footer p {
         width: 35%;
     }
     #frameselection>h5 {
+        color: #fdfd96;
         font-size: 34px;
         margin: 0;
         line-height: 1.6;
     }
+    /*#buildingPhoto {
+        width: 95%;
+        height: 255px;
+    }*/
 }
 /* Very Big over 1200px */
 
